@@ -1,0 +1,30 @@
+.footer {
+  align-self: center;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.button-container {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.correction-message-right {
+  color: green;
+  padding: 20px;
+  margin: 0px;
+}
+
+.correction-message-wrong {
+  color: red;
+  padding: 20px;
+  margin: 0px;
+}
+.not-corrected {
+  padding: 37.75px;
+  margin: 0px;
+}

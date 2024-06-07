@@ -1,6 +1,22 @@
 .question {
-  min-height: 100%;
+  font-size: 30px;
+  height: 786px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.calcul {
+  align-self: center;
+}
+
+input {
+  border: 2px solid white;
+  border-radius: 15px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background-color: #2f343e;
+  height: 60px;
+  width: 60px;
 }

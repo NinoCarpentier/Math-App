@@ -4,7 +4,6 @@ import { App } from "./App";
 import { Result } from "./Result";
 import { ErrorBoundary } from "./ErrorBoundary";
 import { Home } from "./Home";
-import { Stats } from "./Stats";
 import { Header } from "./Header";
 
 export const getRouter = () =>
@@ -32,10 +31,9 @@ export const getRouter = () =>
           ),
         },
         {
-          path: "result/:score",
+          path: "result/:score/:counter",
           element: <Result />,
         },
-        { path: "/statistics", element: <Stats /> },
       ],
     },
   ]);

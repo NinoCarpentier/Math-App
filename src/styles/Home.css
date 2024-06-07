@@ -1,0 +1,11 @@
+.exercice-button-container {
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.exercice-button {
+  width: 100%;
+}

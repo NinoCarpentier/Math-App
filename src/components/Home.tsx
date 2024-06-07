@@ -1,27 +1,15 @@
 import { Link } from "react-router-dom";
-
-const exerciceTypeList = [
-  "Additions",
-  "Subtractions",
-  "Multiplications",
-  "Divisions",
-  "Squares",
-  "Square roots",
-  "Cubes",
-  "Cubic roots",
-];
+import { exerciceTypeList } from "../datas/exerciceTypeList";
+import "../styles/Home.css";
 
 export const Home = () => {
   return (
-    <div>
+    <div className="exercice-button-container">
       {exerciceTypeList.map((exerciceType) => (
         <Link to={`/${exerciceType}/question/1`} key={exerciceType}>
-          <button>{exerciceType}</button>
+          <button className="exercice-button">{exerciceType}</button>
         </Link>
       ))}
-      <Link to={"/statistics"}>
-        <button>My statistics</button>
-      </Link>
     </div>
   );
 };
