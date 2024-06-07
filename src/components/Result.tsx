@@ -1,4 +1,4 @@
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../styles/Result.css";
 
 export const Result = () => {
@@ -17,7 +17,8 @@ export const Result = () => {
         <div className="result-item">
           Time :{" "}
           <h3>
-            {minutes} : {seconds}
+            {minutes < 10 ? `0${minutes}` : minutes} :{" "}
+            {seconds < 10 ? `0${seconds}` : seconds}
           </h3>
         </div>
       </div>

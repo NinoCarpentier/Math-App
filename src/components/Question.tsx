@@ -1,4 +1,4 @@
-import { useParams, redirect, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ExFooter } from "./ExFooter";
 import { generateCalculation } from "./functions/generateCalculation";
@@ -143,7 +143,8 @@ export const Question = () => {
       }}
     >
       <p>
-        {minutes} : {seconds}
+        {minutes < 10 ? `0${minutes}` : minutes} :{" "}
+        {seconds < 10 ? `0${seconds}` : seconds}
       </p>
       <div className="calcul">
         <p>Question {questionId}:</p>
@@ -180,7 +181,6 @@ export const Question = () => {
         correction={correction}
         inputValue={inputValue}
         nextUrl={nextUrl}
-        score={score}
       />
     </div>
   );

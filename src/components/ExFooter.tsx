@@ -1,5 +1,5 @@
 import "../styles/ExFooter.css";
-import { Link, ScrollRestoration } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface ExFooterProps {
   verification: boolean | null;
@@ -7,7 +7,6 @@ interface ExFooterProps {
   correction: (value: number) => void;
   inputValue: string;
   nextUrl: string;
-  score: number;
 }
 
 export const ExFooter = ({
@@ -16,7 +15,6 @@ export const ExFooter = ({
   correction,
   inputValue,
   nextUrl,
-  score,
 }: ExFooterProps) => {
   let correctionMessage = "";
   if (verification) {
@@ -24,7 +22,6 @@ export const ExFooter = ({
   } else if (verification === false) {
     correctionMessage = `Oops, the response is ${String(solution)}.`;
   }
-  console.log(score);
   return (
     <div className="footer">
       <p
